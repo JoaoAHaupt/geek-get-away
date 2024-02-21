@@ -1,0 +1,27 @@
+.user-bar{
+    border-color: #F05941;
+    border-width: 1px;
+    border-radius: 25px;    
+    padding: 5px;
+    width: 154.17px;
+    justify-content: space-between;
+    
+}
+
+.bar-icon{
+    height: 30px;
+    border-radius: 20px;
+
+}
+
+.user-icon{
+    border-radius: 20px;
+    height: 30px;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.user-icon:hover {
+    transform: scale(1.1);
+
+}
