@@ -1,21 +1,21 @@
-import { Searchbar } from '../../components/Searchbar'
-import { Userbar } from '../../components/Userbar'
-
-import { Logo } from '../../components/Logo'
-
-import './App.css'
+import {Route, Routes} from "react-router-dom";
+import { NavBar } from "../../components/NavBar";
+import { LoginPage } from "../../pages/LoginPage";
+import { Layout } from "../../layout";
+import { IndexPage } from "../../IndexPage";
 
 function App() {
 
   return (
-    <>
-      <header >
-        <Logo></Logo>
-  
-        <Searchbar/>
-        <Userbar/>
-      </header>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout/>}>
+        <Route index element={<IndexPage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+      </Route>  
+
+
+    </Routes>
+    
   )
 }
 
