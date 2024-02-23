@@ -4,6 +4,7 @@ div header {
     display: flex;
     align-items: center; 
     justify-content: space-between;
-    background-color: #22092C;
+    background-color: #22092c;
+    border-radius: 20px;
   }
   

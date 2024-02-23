@@ -1,0 +1,9 @@
+.layout {
+    background-color: #6625490b;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    min-height: 100vh;
+    
+    justify-content: flex-start;
+}
