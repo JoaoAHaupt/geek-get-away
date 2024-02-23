@@ -12,7 +12,6 @@ export const LoginPage = () =>{
                 <input type='password' placeholder='password'></input>
                 <LoginButton/>
                 <RegisterMessage/>
-                
             </form>
         </div>
     );
