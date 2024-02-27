@@ -16,18 +16,16 @@ export const LoginPage = () =>{
     const {setUser} = useContext(UserContext);
     async function handleLogin(ev) {
         ev.preventDefault();
-        SetLoginResponse(''); // Reset login response
+        SetLoginResponse(''); 
         try {
             const { data } = await axios.post('/login', { email, password });
             setUser(data);
             setRedirect(true);
         } catch (error) {
             if (error.response && error.response.data && error.response.data.error) {
-                // Display error message received from the server
                 setPColor('red');
                 SetLoginResponse(error.response.data.error);
             } else {
-                // Generic error message for unexpected errors
                 setPColor('red');
                 SetLoginResponse('Login Failed');
             }
