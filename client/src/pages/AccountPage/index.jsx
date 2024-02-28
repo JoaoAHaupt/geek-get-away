@@ -1,27 +1,76 @@
-import { useContext } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { useContext, useState, useEffect } from "react";
+import { Link, Navigate, useParams } from "react-router-dom";
 import { UserContext } from "../../Util/UserContext";
 import './styles.css'
+import { LogoutButton } from "../../components/LogoutButton";
+import axios from "axios";
+import { PlacesPage } from "../PlacesPage";
 
-export const AccountPage = () =>{
-    const { ready, user } = useContext(UserContext);
+export const AccountPage = () => {
+    const { ready, user, setUser } = useContext(UserContext);
+    const [activeLink, setActiveLink] = useState('');
+    const [redirect, setRedirect] = useState(null);
 
-    if(!ready){
+    const { subpage } = useParams();
+
+    useEffect(() => {
+        if (ready && user) {
+            if (subpage === 'bookings') {
+                setActiveLink('bookings');
+            } else if (subpage === 'places') {
+                setActiveLink('places');
+            } else {
+                setActiveLink('account');
+            }
+        }
+    }, [ready, user, subpage]);
+
+    if (!ready) {
         return 'Loading...';
     }
 
-    if(!user && ready){
+    if (!user) {
         return <Navigate to={'/login'} />;
     }
 
-    return(
+    const getLinkStyle = (link) => {
+        return link === activeLink ? {background: 'linear-gradient(to right, #f05841, rgb(255, 160, 28))', color:'#f5f5dc'}: {};
+    };
+
+    async function  logout  ()  {
+        await axios.post('/logout');
+        setRedirect('/');
+    };
+
+    if(redirect){
+        setUser(null);
+        return <Navigate to={redirect}/>
+    }
+
+
+    return (
         <div className="account-page">
             <nav className="account-nav">
-                <Link to={'/account/'}> My accommodations</Link>
-                <Link to={'/account/bookings'}> My bookings</Link>
-                <Link to={'/account/places'}> My accommodations</Link>
+                <Link to={'/account/'} style={getLinkStyle('account')}>My accommodations</Link>
+                <Link to={'/account/bookings'} style={getLinkStyle('bookings')}>My bookings</Link>
+                <Link to={'/account/places'} style={getLinkStyle('places')}>My accommodations</Link>
             </nav>
-            <p>Logged in as {user.name} ({user.email})</p>
+
+            {subpage ==='account'|| subpage === undefined &&(
+                <>
+                    <p>Logged in as {user.name} ({user.email})</p>
+                    <LogoutButton onClick={logout}/>
+                </>
+            )}
+
+            
+            {subpage ==='places'&&(
+                <>
+
+                    <PlacesPage></PlacesPage>
+                </>
+            )}
         </div>
     );
 }
+

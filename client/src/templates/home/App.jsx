@@ -1,9 +1,9 @@
 import {Route, Routes} from "react-router-dom";
 import { NavBar } from "../../components/NavBar";
-import { LoginPage } from "../../pages/LoginPage";
+import { LoginPage } from "../../pages/LoginPage/index.jsx";
 import { Layout } from "../../Layout/Layout.jsx"
 import { IndexPage } from "../../pages/IndexPage";
-import { RegisterPage } from "../../pages/RegisterPage";
+import { RegisterPage } from "../../pages/RegisterPage/index.jsx";
 import axios from "axios";
 import { UserContextProvider } from "../../Util/UserContext.jsx";
 import { AccountPage } from "../../pages/AccountPage/index.jsx";
@@ -20,7 +20,8 @@ function App() {
             <Route index element={<IndexPage/>}/>
             <Route path="/login" element={<LoginPage/>}/>
             <Route path="/register" element={<RegisterPage/>}/>
-            <Route path="/account" element={<AccountPage/>}/>
+            <Route path="/account/:subpage?" element={<AccountPage/>}/>
+
           </Route> 
         </Routes>
     </UserContextProvider>

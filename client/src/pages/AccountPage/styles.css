@@ -11,19 +11,20 @@
     align-items: center;
     justify-content:center;
     color: black;
+    padding: 2rem;
 
 }
 
 nav a{
     margin: 10px;
-    background-color: aqua;
+    border-width: 2px;
     border-radius: 20px;
     padding: 10px;
-    transition: all 500ms ease-in-out;
+    transition: all 300ms ease-in-out;
+
 }
 
 
 nav a:hover {
-    
-    background: linear-gradient(to right, #f05841, rgb(255, 160, 28));
+    transform: scale(1.1);
 }
