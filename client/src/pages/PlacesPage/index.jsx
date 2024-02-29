@@ -1,26 +1,39 @@
+import { Link, useParams } from 'react-router-dom';
 import './styles.css'
 
 export const PlacesPage = () =>{
+    const {action} = useParams();
+
     return(
         <>
-        <p>Title</p>
+            {action!=='new' &&(
+                <Link className='new-places-link' to={'/account/places/new'}>+ Add new places</Link>
+            )}
 
-        <input ></input>
-        <p>Adress</p>
+            {action ==='new'&&(
+                <form className='new-places-form'>
+                        <p>Title</p>
 
-        <input ></input>
-        <p>Description</p>
+                     
+                        <input placeholder='Title'></input>
+                        <p>Adress</p>
 
-        <input ></input>
+                        <input ></input>
+                        <p>Description</p>
 
-        <input type="image"></input>    
+                        <input ></input>
+
+                        <input type="image"></input>    
 
 
-        <p>Check In</p>
-        <input type="time" ></input>
-        <p>Check Out</p>
+                        <p>Check In</p>
+                        <input type="time" ></input>
+                        <p>Check Out</p>
 
-        <input type="time"></input>
+                        <input type="time"></input>
+                </form>
+            )}
+            
         </>
 
     );

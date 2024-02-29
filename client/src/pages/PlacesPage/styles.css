@@ -1,0 +1,40 @@
+.new-places-link{
+    background-color: #ff857f;
+    padding: 0.5rem;
+    border-radius: 20px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    transition: all 100ms ease-in-out;
+
+}
+
+.new-places-link:hover{
+    animation-name: example;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes example {
+    0%   {box-shadow: 0px 0px 10px 3px #fc7972; background-color: #fc7972;}
+    50%  {box-shadow: 0px 0px 10px 5px orangered;background-color: orangered;}
+    100%  {box-shadow: 0px 0px 10px 3px #fc7972;background-color: #fc7972;}
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-places-form {
+    width: 70%;
+}
+
+.new-places-form input{
+    width: 80%;
+}
