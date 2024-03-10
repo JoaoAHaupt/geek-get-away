@@ -58,7 +58,7 @@ export const AccountPage = () => {
 
             {subpage ==='account'|| subpage === undefined &&(
                 <>
-                    <p>Logged in as {user.name} ({user.email})</p>
+                    <p className="user-info-account">Logged in as {user.name} ({user.email})</p>
                     <LogoutButton onClick={logout}/>
                 </>
             )}

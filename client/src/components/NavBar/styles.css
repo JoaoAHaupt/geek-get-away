@@ -1,10 +1,10 @@
 div header {
     padding: 2rem;
-    box-shadow: 0 2px 10px 0 #872341;
+    box-shadow: 0 2px 10px 0 #DCF2F1;
     display: flex;
     align-items: center; 
     justify-content: space-between;
-    background-color: #22092c;
+    background-color: #0F1035;
     border-radius: 20px;
   }
   

@@ -3,6 +3,7 @@
 @tailwind utilities;
 *{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #2a0e13;
 
 }
 
@@ -10,4 +11,14 @@ h1{
     font-size: 3rem;
     color: #2a0e13;
 
+}
+
+h2{
+    font-size: 2rem;
+    color: #2a0e13;
+
+}
+
+body{
+    background-color: #7077a10e;
 }

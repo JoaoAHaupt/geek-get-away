@@ -1,6 +1,5 @@
 .user-bar {
-    border-color: #F05941;
-    border-width: 1px;
+    border-color: #DCF2F1;
     border-radius: 25px;
     display: flex;
     align-items: center;
@@ -9,7 +8,6 @@
     width: auto;
     overflow: hidden;        
     transition: width 300ms ease-in-out; 
-    
 
 }
 
