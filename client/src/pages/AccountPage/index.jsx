@@ -31,10 +31,11 @@ export const AccountPage = () => {
 
     if (!user) {
         return <Navigate to={'/login'} />;
-    }
+    }    
+
 
     const getLinkStyle = (link) => {
-        return link === activeLink ? {background: 'linear-gradient(to right, #f05841, rgb(255, 160, 28))', color:'#f5f5dc'}: {};
+        return link === activeLink ? {background: 'linear-gradient(to right, #365486, #7FC7D9)', color:'#f5f5dc'}: {};
     };
 
     async function  logout  ()  {

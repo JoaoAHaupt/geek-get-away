@@ -1,5 +1,5 @@
 .new-places-link{
-    background-color: #ff857f;
+    background-color: #7FC7D9;
     padding: 0.5rem;
     border-radius: 20px;
     width: 20%;
@@ -13,15 +13,15 @@
 
 .new-places-link:hover{
     animation-name: example;
-    animation-duration: 1s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
-
+    
 }
 
 @keyframes example {
-    0%   {box-shadow: 0px 0px 10px 3px #fc7972; background-color: #fc7972;}
-    50%  {box-shadow: 0px 0px 10px 5px orangered;background-color: orangered;}
-    100%  {box-shadow: 0px 0px 10px 3px #fc7972;background-color: #fc7972;}
+    0%   {box-shadow: 0px 0px 10px 3px #7FC7D9; background-color: #7FC7D9;}
+    50%  {box-shadow: 0px 0px 10px 5px #365486;background-color: #365486;}
+    100%  {box-shadow: 0px 0px 10px 3px #7FC7D9;background-color: #7FC7D9;}
 
 }
 
@@ -36,7 +36,8 @@ form{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-color: #fc7972;
+    border-color: #7FC7D9;
+    border-radius: 20px;
     border-width: 2px;
     padding: 1rem;
 }

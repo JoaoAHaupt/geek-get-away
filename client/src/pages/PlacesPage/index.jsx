@@ -25,8 +25,8 @@ export const PlacesPage = () =>{
                         </div>
                         <div className='input-div'>
                             <h2>Description</h2>
-                            <h3>lepo</h3>
-                            <input placeholder='Example: Bag End, Finn and Jake House '></input>
+                            <h3><i>Some characteristics of the place and the location</i></h3>
+                            <input placeholder="Example: It's a very good "></input>
                         </div>
                         <div className='input-div-check'>
                              <div className='input-time-div'>
@@ -40,24 +40,18 @@ export const PlacesPage = () =>{
                          </div>
                         <div className='input-div'>
                             <h2>Photos</h2>
-                            <h3>lepo</h3>
-                                <input type='text' placeholder='Add photos uploading a link'></input>
-                                <div className='img-input'> 
-                                    <button>+</button>
-                                </div>
-                           
+                            <h3><i>More = better</i></h3>
+                            <div>
+                                <input placeholder="Example: It's a very good "></input>                     
+                                <button>Submit</button>
+                            </div>
                             
-        
+
+                            <div className='img-input'> 
+                                <button>+</button>
+                            </div>
                         </div>
-
-
-
-                      
-
-                     
-
-
-                    <button>Submit</button>
+                        <button></button>
                 </form>
             )}
             
