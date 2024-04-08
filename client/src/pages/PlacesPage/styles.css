@@ -43,7 +43,17 @@ form{
 }
 
 .new-places-form input{
+    color: #365486;
+
     width: 100%;
+}
+
+.new-places-form textarea{
+    color: #365486;
+
+    width: 100%;
+    border-radius: 20px;
+    padding: 1rem;
 }
 
 .input-div{
@@ -51,6 +61,8 @@ form{
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: ce;
 }
 .input-div h3, h1{
     margin-left: 0.5rem;
@@ -87,13 +99,17 @@ form{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 3rem 0rem 0rem 3rem;
+    margin: 3rem 3rem 3rem 3rem;
 }
 
 .input-div h3{
     color: rgba(0, 0, 0, 0.632);
 }
 
-.input-time-div input{
+.text-div{
     width: 100%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
 }
+

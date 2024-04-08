@@ -67,7 +67,6 @@ export const AccountPage = () => {
             
             {subpage ==='places'&&(
                 <>
-
                     <PlacesPage></PlacesPage>
                 </>
             )}
