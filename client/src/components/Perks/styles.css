@@ -1,0 +1,29 @@
+.checkbox-perk {
+    cursor: pointer;
+
+    width: 40%;
+    max-width: 40%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    border-width: 3px;
+    border-radius: 12px;
+    margin: 0.25rem;
+}
+
+.checkbox-perk input {
+   min-width: 1.5rem;
+    
+    max-width: 1.5rem;
+    margin-right: 1rem; 
+}
+
+.checkbox-perk span {
+    font-size: 1.1rem;
+    margin-right: 10px; 
+}
+
+.checkbox-perk svg {
+    width: 30px;
+    height: 30px;
+}

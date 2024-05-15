@@ -1,15 +1,17 @@
 const express = require('express');
-const app =express();
 const bcrypt = require('bcryptjs')
 const cors = require('cors');
 const { default: mongoose } = require('mongoose');
 const UserModel = require('./models/User');
 const cookieParser = require('cookie-parser');
+const imgDownloader = require('image-downloader')
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 const bcryptString = bcrypt.genSaltSync(10);
 const jwtSecret = 'ptFZ0PTt52ww605N6Bxz7BXvFJz0xZ';
+
+const app =express();
 
 app.use(express.json());
 app.use(cookieParser());
@@ -79,6 +81,16 @@ app.get('/profile', async(req, res)=>{
 app.post('/logout', (req, res)=>{
     res.cookie('token','').json(true);
 
+});
+
+app.post('/upload-by-link', async (req,res) =>{
+    const link = req.body;
+    const newName = Date.now + ".jpg"
+    await imgDownloader.image({
+        url:link, 
+        dest:__dirname+'/uploads/'+newName,
+    })
+    res.json(newName)
 });
 
 
